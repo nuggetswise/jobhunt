@@ -286,22 +286,3 @@ Build **story-builder** and test if Claude automatically:
 ### Phase 4: Package & Test (2 hours)
 Create .skill files using packaging script
 
----
-
-## ❓ Questions for You
-
-1. **Do you want me to write the actual SKILL.md for company-intel right now?** (With proper October 2025 best practices)
-
-2. **File location preference:**
-   - Personal: `~/.claude/skills/` (works everywhere)
-   - Project: `.claude/skills/` (team sharing)
-   - Both? (hybrid)
-
-3. **Should skills create the `~/interview-os/` directory structure automatically?** Or expect users to set it up?
-
-4. **Pricing clarification:** Is $49 for:
-   - 5 .skill files only?
-   - Skills + templates + tutorial?
-   - Skills + ongoing updates?
-
-Let me know and I'll help you build this properly! 🎯
