@@ -7,32 +7,40 @@
 
 ---
 
-## EXECUTIVE SUMMARY
+## EXECUTIVE SUMMARY (MISSION-DRIVEN UPDATE)
 
-### Skills Inventory: 7 CORE SKILLS IDENTIFIED
+**Mission:** Get users to final rounds (not negotiation, not journaling)
+**Timeline:** 2 weeks to MVP
+**Pricing:** $49 (break-even is success)
 
-| Skill | Status | Completeness | Critical Gaps |
-|-------|--------|--------------|---------------|
-| interview-decoder | ✅ READY | 70% | Pattern library not structured |
-| compensation-architect | ✅ READY | 65% | Email templates missing |
-| redflag-navigator | ✅ READY | 80% | Manual detection only |
-| story-builder | ✅ READY | 75% | No STAR++ conversion |
-| company-intel | ✅ READY | 85% | 20+ searches per company |
-| practice-analyzer | ⚠️ INCOMPLETE | 40% | No video analysis implementation |
-| interview-journal | ✅ READY | 50% | All metrics manual input |
+### Skills Inventory: 5 MVP SKILLS + 2 POST-MVP
 
-### Overall Assessment: 68% COMPLETE FOR PURE DIGITAL
+| Skill | Status | MVP Status | Critical Gaps |
+|-------|--------|------------|---------------|
+| interview-decoder | ✅ READY (in Morespecs.md) | **MVP CORE** | Pattern library not structured |
+| story-builder | ✅ READY (in responses.md) | **MVP CORE** | No STAR++ conversion |
+| company-intel | ✅ READY (in responses.md) | **MVP CORE** | 20+ searches per company |
+| practice-analyzer | ✅ READY (in Morespecs.md) | **MVP CORE** | Manual mode acceptable |
+| redflag-navigator | ✅ READY (in Morespecs.md) | **MVP CORE** | Manual detection only |
+| compensation-architect | ✅ READY (in Morespecs.md) | **POST-MVP** | Email templates missing |
+| interview-journal | ✅ READY (in responses.md) | **POST-MVP** | All metrics manual input |
+
+### Overall Assessment: 85% COMPLETE FOR MVP (5 skills)
+- **60% already written** (3 skills in Morespecs.md: interview-decoder, practice-analyzer, redflag-navigator)
+- **40% needs building** (2 skills: story-builder, company-intel - extract from responses.md)
+- **28 hours estimated** to complete MVP (2 weeks)
 
 ---
 
-## PART 1: COMPLETE SKILLS INVENTORY
+## PART 1: COMPLETE SKILLS INVENTORY (REVISED)
 
-### Core AI Skills (7 Total)
+### MVP Core Skills (5 Total - Required for Launch)
 
-#### 1. **interview-decoder.md**
+#### 1. **interview-decoder.md** - MVP CORE ✅
 **Location:** `.claude/skills/interview-decoder.md`
 **Source:** Morespecs.md (lines 22-118)
-**Status:** ✅ FULLY SPECIFIED
+**Status:** ✅ FULLY WRITTEN - READY TO EXTRACT & DEPLOY
+**Why MVP:** Critical for reaching final rounds - helps decode questions strategically
 
 **Functionality:**
 - Real-time interview question analysis
@@ -63,10 +71,11 @@
 
 ---
 
-#### 2. **compensation-architect.md**
-**Location:** `.claude/skills/compensation-architect.md`
-**Source:** Morespecs.md (lines 120-223)
-**Status:** ✅ READY (but email templates incomplete)
+#### 2. **story-builder.md** - MVP CORE ✅
+**Location:** `.claude/skills/story-builder.md`
+**Source:** responses.md (lines 6-182)
+**Status:** ✅ FULLY WRITTEN - NEEDS EXTRACTION FROM RESPONSES.MD
+**Why MVP:** Essential for behavioral interviews - 70% of reaching final rounds
 
 **Functionality:**
 - Pre-negotiation research protocol
