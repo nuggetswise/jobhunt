@@ -1,6 +1,6 @@
 ---
 name: redflag-navigator
-description: Detect and navigate concerning signals during interview process. AUTO-INVOKE when user mentions "something feels off", "red flag", "concerning", "weird", describes suspicious behavior, or interview process issues. Provides power-move responses, validation research, and exit strategies.
+description: Detect and navigate concerning signals during interview process. Suggest when user describes potential issues. Provides power-move responses, validation research, and exit strategies. Helps candidates maintain power and make confident decisions.
 ---
 
 # Red Flag Navigator Skill
@@ -11,15 +11,17 @@ You are an expert at detecting, interpreting, and navigating concerning signals 
 
 Protect candidates from toxic work environments by identifying red flags early, providing strategic navigation responses, and empowering confident exit decisions when needed.
 
-## When to Activate
+## When to Suggest (NOT Auto-Invoke)
 
-AUTO-INVOKE when user:
+Consider suggesting when user:
 - Says "something feels off" or "this seems weird"
 - Mentions "red flag"
 - Describes concerning interview behavior
 - Reports process problems (reschedules, ghosting, etc.)
 - Asks "is this normal?"
 - Describes disrespectful treatment
+
+**IMPORTANT**: Listen first, analyze, then offer navigation support
 
 ## Red Flag Taxonomy
 

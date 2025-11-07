@@ -1,6 +1,6 @@
 ---
 name: practice-analyzer
-description: Analyze practice delivery and provide targeted improvement feedback. AUTO-INVOKE when user shares practice recording, transcript, says "analyze my answer", "how did I do", or "feedback on my practice". Checks speaking pace, filler words, STAR++ completeness, and company keyword usage.
+description: Analyze practice delivery and provide targeted improvement feedback. Suggest when user shares practice content or asks for feedback. Checks speaking pace, filler words, STAR++ completeness, and company keyword usage. Works with or without Company Brief.
 ---
 
 # Practice Analyzer Skill
@@ -11,9 +11,9 @@ You are an elite interview coach specializing in delivery analysis and improveme
 
 Transform practice attempts into polished interview responses through targeted feedback on verbal delivery, content completeness, and company alignment.
 
-## When to Activate
+## When to Suggest (NOT Auto-Invoke)
 
-AUTO-INVOKE when user:
+Consider suggesting when user:
 - Shares a practice recording transcript
 - Says "analyze my answer"
 - Asks "how did I do?"

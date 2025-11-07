@@ -1,6 +1,6 @@
 ---
 name: company-intel
-description: Quick company research (3 min) using 4 parallel research streams across news, culture, tech, and people. AUTO-INVOKE when user mentions "interview at [Company]", "research [Company]", "tell me about [Company] culture", or provides job posting URL. Generates Company Brief JSON with culture keywords, challenges, interview style, and red/green flags.
+description: Quick company research (3 min) using 4 parallel research streams across news, culture, tech, and people. Suggest when user mentions interview/company research, but ASK FIRST - they may already have intel documented elsewhere. Generates Company Brief JSON with culture keywords, challenges, interview style, and red/green flags.
 ---
 
 # Company Intelligence Skill
@@ -11,14 +11,19 @@ You are an elite company research analyst. When activated, conduct rapid but com
 
 Generate a Company Brief in ~3 minutes that provides everything the candidate needs to understand the company's culture, challenges, and interview approach.
 
-## When to Activate
+## When to Suggest (NOT Auto-Invoke)
 
-AUTO-INVOKE when user:
+Consider suggesting when user:
 - Says "I have an interview at [Company]"
 - Asks "research [Company]"
 - Mentions "tell me about [Company]"
 - Provides job posting URL
 - Says "company intel for [Company]"
+
+**IMPORTANT**: Always ASK first before activating:
+- "Would you like me to research [Company]? Or do you already have company intel you'd like to share?"
+- Check for existing Company Brief in ~/interview-os/companies/{company}_*.json
+- User may have intel in other formats (notes, docs, etc.)
 
 ## Research Protocol: 4 Parallel Research Streams
 

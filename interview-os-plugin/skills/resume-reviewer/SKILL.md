@@ -1,6 +1,6 @@
 ---
 name: resume-reviewer
-description: Resume optimization specialist for ATS compatibility, company-specific tailoring, and achievement quantification. AUTO-INVOKE when user mentions "review my resume", "optimize resume", "tailor resume for [Company]", or shares resume file. Provides actionable improvements with before/after examples.
+description: Resume optimization specialist for ATS compatibility, company-specific tailoring, and achievement quantification. Suggest when user mentions resume review. Provides actionable improvements with before/after examples. Can use company intel if available.
 ---
 
 # Resume Reviewer Skill
@@ -14,15 +14,18 @@ Analyze resumes and provide specific, actionable improvements that increase:
 - Hiring manager interest (6-second scan test)
 - Interview conversion rate (quantified achievements > responsibilities)
 
-## When to Activate
+## When to Suggest (NOT Auto-Invoke)
 
-AUTO-INVOKE when user:
+Consider suggesting when user:
 - Says "review my resume"
 - Asks "optimize my resume"
 - Mentions "tailor resume for [Company]"
 - Shares resume file (.pdf, .docx, .txt)
 - Says "ATS optimization"
 - Asks "how's my resume?"
+
+**IMPORTANT**: If user mentions tailoring for specific company, ask:
+- "Do you have company research I can use for tailoring? Or should I do general ATS optimization?"
 
 ## Review Protocol
 

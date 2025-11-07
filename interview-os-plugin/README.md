@@ -9,8 +9,9 @@
 
 ## 🎯 What Is Interview OS?
 
-Interview OS transforms Claude into a comprehensive interview coach using 7 specialized skills that work together seamlessly:
+Interview OS transforms Claude into a comprehensive interview coach using 7 specialized skills. You drive the conversation naturally - Claude suggests relevant skills and always asks before activating them.
 
+**The 7 Skills:**
 - **company-intel**: 3-minute company research using parallel research streams
 - **resume-reviewer**: ATS optimization and company-specific resume tailoring
 - **story-builder**: Transform experiences into IMPACT-R narratives
@@ -18,6 +19,8 @@ Interview OS transforms Claude into a comprehensive interview coach using 7 spec
 - **practice-analyzer**: Analyze delivery with targeted feedback
 - **redflag-navigator**: Detect and navigate concerning signals
 - **compensation-architect**: Strategic negotiation support
+
+**Philosophy**: Conversation-first, skill suggestions second. You're in control.
 
 ---
 
@@ -37,51 +40,54 @@ That's it! Interview OS is ready to use.
 
 ### What Gets Installed
 
-- ✅ 7 intelligent skills (auto-activate based on context)
-- ✅ 3 bonus slash commands (/quick-prep, /practice-mode, /red-flag-check)
+- ✅ 7 intelligent skills (Claude suggests when relevant, but always asks first)
 - ✅ Auto-created data directory at `~/interview-os/`
 
 ---
 
 ## 📚 Quick Start
 
-### Standard Workflow (3-7 days before interview)
+### Natural Conversation Approach
 
-Just say:
+Simply talk to Claude naturally about your interview needs:
+
+**Examples:**
 ```
 "I have an interview at Stripe for Senior Backend Engineer in 5 days"
+
+Claude will ask what you'd like help with:
+- Company research?
+- Resume review?
+- Story preparation?
+- Practice questions?
+- Something else?
 ```
 
-Claude will automatically:
-1. Research Stripe (company-intel skill) → 3 minutes
-2. Prepare adapted stories (story-builder skill) → Ask for your experiences
-3. Generate practice questions (interview-decoder skill) → Ready when you are
-4. Analyze your practice (practice-analyzer skill) → As you practice
-5. Monitor for red flags (redflag-navigator skill) → Throughout process
+**You drive the conversation. Claude suggests skills when relevant, but always asks first.**
 
-### Emergency Prep (1-2 days before)
+### Common Workflows
 
+**Week Before Interview:**
 ```
-/quick-prep "Stripe" "Senior Backend Engineer"
-```
-
-10-minute compressed workflow: Company Brief + 3 Core Stories + 10 Questions
-
-### Practice Interview
-
-```
-/practice-mode
+You: "I have an interview at Stripe next week"
+Claude: "What would you like to work on? Company research, stories, practice questions?"
+You: "Let's start with company research"
+Claude: [Activates company-intel skill after confirmation]
 ```
 
-Interactive mock interview with real-time feedback loop
-
-### Red Flag Check
-
+**Emergency Prep (1-2 days before):**
 ```
-/red-flag-check "They said 'we're like a family here'"
+You: "Interview at Stripe tomorrow - I'm unprepared!"
+Claude: "Let's prioritize. Do you have company intel, or should I research them quickly?"
+You: "Please research them"
+Claude: "Great. While I do that, can you share 2-3 strong achievements? I'll adapt them to Stripe culture."
 ```
 
-Instant analysis and navigation strategy
+**Red Flag Concerns:**
+```
+You: "They rescheduled 3 times and said 'we're like a family'"
+Claude: [Analyzes red flags and provides navigation strategy]
+```
 
 ---
 
@@ -91,12 +97,11 @@ Instant analysis and navigation strategy
 
 **What it does**: Deep company research in 3 minutes using 4 parallel research streams
 
-**Auto-activates when** you mention:
-- "I have an interview at [Company]"
-- "Research [Company]"
-- "Tell me about [Company] culture"
+**Claude suggests when** you mention interviews or company research, but **asks first** - you may already have intel
 
 **Output**: Company Brief JSON with culture keywords, recent challenges, interview style, red/green flags
+
+**Flexibility**: Can use intel from anywhere (not just ~/interview-os/)
 
 **Research streams**: Executes 4 parallel research operations:
 - **Public Intelligence**: News, funding, leadership
@@ -112,11 +117,7 @@ Instant analysis and navigation strategy
 
 **What it does**: ATS optimization and company-specific resume tailoring with actionable before/after examples
 
-**Auto-activates when** you mention:
-- "Review my resume"
-- "Optimize my resume"
-- "Tailor resume for [Company]"
-- Share resume file
+**Claude suggests when** you mention resume review or share resume files
 
 **Output**: Comprehensive resume review with:
 - Quick wins (10-minute fixes)
@@ -134,10 +135,7 @@ Instant analysis and navigation strategy
 
 **What it does**: Transform raw experiences into IMPACT-R narratives adapted to company culture
 
-**Auto-activates when** you mention:
-- "Prepare stories"
-- "Build stories"
-- "Tell me about a time..."
+**Claude suggests when** you mention story preparation, but **asks first** - generic or company-tailored?
 
 **Output**: Story Bank JSON with 8-10 stories, each with:
 - IMPACT-R framework
@@ -153,11 +151,7 @@ Instant analysis and navigation strategy
 
 **What it does**: Decode questions, match to stories, generate STAR++ responses
 
-**Auto-activates when** you mention:
-- "Practice"
-- "Mock interview"
-- Share an interview question
-- "What questions will they ask?"
+**Claude suggests when** you mention practice or questions, asks what you need help with
 
 **Output**:
 - Question taxonomy (what they're really asking)
@@ -175,10 +169,7 @@ Instant analysis and navigation strategy
 
 **What it does**: Analyze practice delivery + provide targeted feedback
 
-**Auto-activates when** you mention:
-- "Analyze my answer"
-- "How did I do?"
-- Share practice transcript
+**Claude suggests when** you share practice content or ask for feedback
 
 **Output**:
 - Speaking pace analysis (target: 150-180 wpm)
@@ -195,11 +186,7 @@ Instant analysis and navigation strategy
 
 **What it does**: Detect and navigate concerning interview signals
 
-**Auto-activates when** you mention:
-- "Something feels off"
-- "Red flag"
-- Describe suspicious behavior
-- Process problems
+**Claude suggests when** you describe potential issues or concerns
 
 **Output**:
 - Red flag categorization + severity (🟢🟡🟠🔴)
@@ -216,11 +203,7 @@ Instant analysis and navigation strategy
 
 **What it does**: Strategic compensation negotiation with market research
 
-**Auto-activates when** you mention:
-- "I received an offer"
-- "Salary negotiation"
-- "Is this offer good?"
-- "Market rate"
+**Claude suggests when** you discuss offers or compensation, asks what you need
 
 **Output**:
 - Market intelligence from levels.fyi, Glassdoor
@@ -307,12 +290,13 @@ Interview OS succeeds when:
 
 ## 🔧 Troubleshooting
 
-### Skills not activating?
+### Claude not suggesting skills?
 
-Try explicitly invoking:
+Be explicit about what you need:
 ```
-"Use company-intel to research Stripe"
-"Use story-builder to prepare stories"
+"I need help researching Stripe for my interview"
+"Can you help me prepare stories?"
+"Let's practice interview questions"
 ```
 
 ### Company Brief not found?

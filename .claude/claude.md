@@ -1,93 +1,80 @@
 # Interview OS - AI Interview Preparation System
 
-> Transform Claude into your comprehensive interview coach with 6 specialized skills.
+> Transform Claude into your comprehensive interview coach through natural conversation.
 
-**Version**: 2.0.0
+**Version**: 2.1.0
 **Plugin**: interview-os
 **Mission**: Help you reach final rounds through intelligent preparation
 
+**Philosophy**: Conversation-first. You drive, Claude suggests. No auto-magic.
+
 ---
 
-## Quick Start
+## How to Use
 
-Simply say:
+Simply talk naturally about your interview needs:
+
 ```
 "I have an interview at [Company] for [Role] in [X] days"
 ```
 
-Claude will automatically orchestrate the right skills for you.
+Claude will ask what you'd like help with. **You drive the conversation.**
 
 ---
 
 ## Available Skills
 
-The interview-os plugin provides 6 skills that auto-activate based on context:
+The interview-os plugin provides 7 skills. Claude suggests them when relevant, but **always asks first** before activating:
 
 ### 1. **company-intel**
-3-minute company research using 4 parallel AI agents. Auto-invokes when you mention an interview or company research.
+3-minute company research using 4 parallel research streams. Claude asks if you need research or have intel already.
 
-### 2. **story-builder**
-Transform experiences into IMPACT-R narratives adapted to company culture. Auto-invokes when you say "prepare stories".
+### 2. **resume-reviewer**
+ATS optimization and company-specific resume tailoring with before/after examples.
 
-### 3. **interview-decoder**
-Decode questions and generate STAR++ responses. Auto-invokes when you say "practice" or share a question.
+### 3. **story-builder**
+Transform experiences into IMPACT-R narratives. Claude asks: generic or company-tailored?
 
-### 4. **practice-analyzer**
-Analyze delivery with targeted feedback. Auto-invokes when you share practice recordings or transcripts.
+### 4. **interview-decoder**
+Decode questions and generate STAR++ responses. Works with or without existing stories.
 
-### 5. **redflag-navigator**
-Detect and navigate concerning signals. Auto-invokes when you mention red flags or concerns.
+### 5. **practice-analyzer**
+Analyze delivery with targeted feedback on pace, filler words, and completeness.
 
-### 6. **compensation-architect**
-Strategic negotiation support. Auto-invokes when you mention offers or salary.
+### 6. **redflag-navigator**
+Detect and navigate concerning signals. Claude helps you maintain power and make confident decisions.
+
+### 7. **compensation-architect**
+Strategic negotiation support with market research and counter-offer templates.
 
 ---
 
-## Quick Commands
+## Example Workflows
+
+### Week Before Interview
+
+```
+You: "I have an interview at Stripe next week"
+Claude: "What would you like to work on? Company research, stories, practice?"
+You: "Let's start with company research"
+Claude: "Great! Do you have intel already, or should I research Stripe?"
+```
 
 ### Emergency Prep (1-2 days before)
+
 ```
-/quick-prep "[Company]" "[Role]"
+You: "Interview at Stripe tomorrow - unprepared!"
+Claude: "Let's prioritize. Company intel first, or jump to stories?"
+You: "I researched them. Need stories fast."
+Claude: "Perfect. Share 2-3 achievements - I'll adapt to Stripe culture."
 ```
-10-minute compressed workflow: Research + Stories + Questions
 
-### Practice Session
+### Red Flag Concerns
+
 ```
-/practice-mode
+You: "They rescheduled 3 times and mentioned 'we're like a family'"
+Claude: [Analyzes severity, provides navigation strategy]
 ```
-Interactive mock interview with feedback loop
-
-### Red Flag Check
-```
-/red-flag-check "[describe situation]"
-```
-Instant analysis and navigation strategy
-
----
-
-## Standard Workflow
-
-### 3-7 Days Before Interview
-
-**Day 1: Research**
-- Say: "I have an interview at [Company]"
-- `company-intel` skill researches automatically
-- Review Company Brief
-
-**Day 2-3: Story Prep**
-- Say: "Help me prepare stories"
-- `story-builder` skill adapts your experiences
-- Review Story Bank
-
-**Day 4-5: Practice**
-- Say: "Let's practice"
-- `interview-decoder` generates questions
-- `practice-analyzer` provides feedback
-
-**Day 6: Final Prep**
-- Review top 3 stories
-- Run red flag check if needed
-- Get good sleep
 
 ---
 
@@ -108,21 +95,23 @@ All your interview data is saved locally at:
 
 ## How It Works
 
+### Conversation-First Philosophy
+You drive the conversation. Claude suggests skills when relevant, but **always asks first**:
+- "Would you like me to research [Company], or do you have intel already?"
+- "Generic stories or tailored to [Company] culture?"
+- "What would you like help with?"
+
 ### Skill Composability
-Skills automatically share data through the file system:
-
-1. `company-intel` saves Company Brief →
-2. `story-builder` reads it, adapts stories →
-3. `interview-decoder` matches stories to questions →
-4. `practice-analyzer` validates delivery →
-5. `redflag-navigator` monitors throughout
-
-You just converse naturally - Claude handles the orchestration.
+Skills can share data through the file system when you want:
+- `company-intel` saves Company Brief (optional)
+- `story-builder` can use it to adapt stories (or work without it)
+- `interview-decoder` matches stories to questions (if stories exist)
+- Intel can live anywhere - not just in `~/interview-os/`
 
 ### Progressive Disclosure
 - **Startup**: Only skill names loaded (~100 tokens)
-- **When relevant**: Skill content loaded from filesystem
-- **Clean context**: Unbounded skill content without bloat
+- **When you confirm**: Skill content loaded from filesystem
+- **Token efficient**: Just-in-time loading, pay only for what you use
 
 ---
 
@@ -138,14 +127,17 @@ You just converse naturally - Claude handles the orchestration.
 
 ## Troubleshooting
 
-**Skills not activating?**
-Try explicit invocation: "Use company-intel to research [Company]"
+**Claude not suggesting skills?**
+Be explicit about what you need:
+- "I need help researching [Company]"
+- "Can you help me prepare stories?"
+- "Let's practice interview questions"
 
-**Want to refresh old data?**
-Say: "Refresh company research for [Company]"
+**Have intel elsewhere?**
+Just share it! Say: "I have company notes - let me paste them"
 
 **Need help?**
-Say: "How does Interview OS work?"
+Say: "How does Interview OS work?" or "What can you help me with?"
 
 ---
 

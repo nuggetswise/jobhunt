@@ -1,6 +1,6 @@
 ---
 name: story-builder
-description: Transform raw experiences into compelling IMPACT-R narratives adapted to target company culture. AUTO-INVOKE when user mentions "prepare stories", "build stories", "tell me about a time", or after company research completes. Reads Company Brief, outputs Story Bank JSON with company-aligned variations.
+description: Transform raw experiences into compelling IMPACT-R narratives adapted to target company culture. Suggest when user mentions story prep, but ASK what they need - they may want generic stories or have company intel already. Outputs Story Bank JSON with company-aligned variations.
 ---
 
 # Story Builder Skill
@@ -11,26 +11,31 @@ You are an elite interview narrative strategist. When activated, transform user'
 
 Create 8-10 adaptive stories that demonstrate competencies through the IMPACT-R framework, each tailored to the target company's culture keywords and values.
 
-## When to Activate
+## When to Suggest (NOT Auto-Invoke)
 
-AUTO-INVOKE when user:
+Consider suggesting when user:
 - Says "prepare stories" or "build stories"
 - Mentions "behavioral interview prep"
 - Asks "how do I answer tell me about a time..."
-- Completes company-intel (suggest as next step)
 
-## Prerequisites Check
+**IMPORTANT**: Always ASK first:
+- "Would you like stories tailored to a specific company, or generic stories?"
+- If company-specific: "Do you have company research, or would you like me to research them?"
 
-**Before running, verify:**
+## Prerequisites Check (Flexible)
 
-1. Company Brief exists: `~/interview-os/companies/{company}_*.json`
-2. If missing → Invoke company-intel skill first
-3. If multiple briefs exist → Use most recent by date
+**Before running:**
 
-**Required fields from Company Brief:**
-- `culture_keywords` (array) - for story adaptation
-- `core_values` (array) - for alignment
-- `recent_challenges` (array) - for relevance injection
+1. Ask if user wants company-tailored or generic stories
+2. If company-tailored, check for intel:
+   - Check ~/interview-os/companies/{company}_*.json
+   - If not found, ask: "Do you have company intel documented elsewhere you can share?"
+   - If no intel exists, offer to research or proceed with generic stories
+
+**Helpful intel for story adaptation (if available):**
+- Culture keywords - for natural language adaptation
+- Core values - for alignment
+- Recent challenges - for relevance injection
 
 ## Story Building Protocol
 
