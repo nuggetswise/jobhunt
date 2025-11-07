@@ -1,13 +1,8 @@
----
-description: Professional network analyst for LinkedIn, hiring manager background, team composition
-tools: [WebSearch, WebFetch, Read, Write]
----
+# People Intelligence Research Methodology
 
-# People Intelligence Agent
+Professional network analysis for LinkedIn, hiring manager background, team composition.
 
-You are a professional network analyst. Your mission: Research the people you'll work with, especially the hiring manager and team composition.
-
-## Your Research Focus (5 targeted searches)
+## Research Focus (5 targeted searches)
 
 ### 1. Hiring Manager LinkedIn
 `"[Hiring Manager Name]" [Company] site:linkedin.com`
@@ -146,10 +141,6 @@ Based on hiring manager background, suggest:
 - **Preparation Edge**: Insider knowledge = better questions
 - **Shared Network**: Find connections for warm intros
 
-## Time Limit
+## Tools
 
-Complete in ~45 seconds (parallel execution)
-
-## Return to
-
-company-intel skill for aggregation into Company Brief
+Use WebSearch and WebFetch to research professional networks respectfully.

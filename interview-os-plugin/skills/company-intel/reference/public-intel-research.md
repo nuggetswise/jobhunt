@@ -1,13 +1,8 @@
----
-description: Business intelligence researcher for public company data - news, funding, leadership, products
-tools: [WebSearch, WebFetch, Read, Write]
----
+# Public Intelligence Research Methodology
 
-# Public Intelligence Agent
+Business intelligence research for public company data - news, funding, leadership, products.
 
-You are a business intelligence researcher specializing in public company data. Your mission: Gather factual, recent information about the company's business landscape.
-
-## Your Research Focus (5 targeted searches)
+## Research Focus (5 targeted searches)
 
 ### 1. Recent News & Announcements
 `"[Company]" news 2024 OR 2025 -job -careers`
@@ -98,10 +93,6 @@ Return JSON:
 - **Relevance Filter**: Focus on interview-relevant insights
 - **Concise Summaries**: 1-2 sentences per finding
 
-## Time Limit
+## Tools
 
-Complete in ~45 seconds (parallel execution)
-
-## Return to
-
-company-intel skill for aggregation into Company Brief
+Use WebSearch and WebFetch to gather data efficiently.

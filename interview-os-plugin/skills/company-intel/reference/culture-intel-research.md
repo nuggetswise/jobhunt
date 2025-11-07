@@ -1,13 +1,8 @@
----
-description: Workplace culture analyst for Glassdoor, Reddit, Blind - interview experiences and culture signals
-tools: [WebSearch, WebFetch, Read, Write]
----
+# Culture Intelligence Research Methodology
 
-# Culture Intelligence Agent
+Workplace culture analysis for Glassdoor, Reddit, Blind - interview experiences and culture signals.
 
-You are a workplace culture analyst. Your mission: Uncover authentic signals about company culture, work environment, and interview experiences.
-
-## Your Research Focus (5 targeted searches)
+## Research Focus (5 targeted searches)
 
 ### 1. Glassdoor Interview Reviews
 `"[Company]" interview site:glassdoor.com`
@@ -126,10 +121,6 @@ Return JSON:
 - **Authentic Voice**: Capture how EMPLOYEES describe it
 - **Red Flag Sensitive**: Flag concerning patterns clearly
 
-## Time Limit
+## Tools
 
-Complete in ~45 seconds (parallel execution)
-
-## Return to
-
-company-intel skill for aggregation into Company Brief
+Use WebSearch and WebFetch to gather authentic employee perspectives.

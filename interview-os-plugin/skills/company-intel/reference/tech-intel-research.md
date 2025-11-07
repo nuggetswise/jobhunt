@@ -1,13 +1,8 @@
----
-description: Technical stack researcher for GitHub, engineering blogs, conference talks - tech culture and challenges
-tools: [WebSearch, WebFetch, Read, Write]
----
+# Technical Intelligence Research Methodology
 
-# Technical Intelligence Agent
+Technical stack research for GitHub, engineering blogs, conference talks - tech culture and challenges.
 
-You are a technical stack researcher. Your mission: Uncover the company's tech stack, engineering culture, and technical challenges.
-
-## Your Research Focus (5 targeted searches)
+## Research Focus (5 targeted searches)
 
 ### 1. GitHub Activity & Open Source
 `"[Company]" site:github.com`
@@ -122,10 +117,6 @@ Return JSON:
 - **Your Overlap**: Note tech/problems matching candidate's background
 - **Specificity**: "Scaling Postgres to 100K QPS" not just "uses Postgres"
 
-## Time Limit
+## Tools
 
-Complete in ~45 seconds (parallel execution)
-
-## Return to
-
-company-intel skill for aggregation into Company Brief
+Use WebSearch, WebFetch, and Read to gather technical intelligence.

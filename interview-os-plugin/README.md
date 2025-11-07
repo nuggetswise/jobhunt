@@ -2,16 +2,17 @@
 
 > AI-powered interview preparation system that helps candidates reach final rounds through intelligent, adaptive preparation.
 
-**Version**: 2.0.0
+**Version**: 2.1.0
 **Mission**: Help 60% of users reach final rounds (vs 20-30% baseline)
 
 ---
 
 ## 🎯 What Is Interview OS?
 
-Interview OS transforms Claude into a comprehensive interview coach using 6 specialized skills that work together seamlessly:
+Interview OS transforms Claude into a comprehensive interview coach using 7 specialized skills that work together seamlessly:
 
-- **company-intel**: 3-minute company research using parallel AI agents
+- **company-intel**: 3-minute company research using parallel research streams
+- **resume-reviewer**: ATS optimization and company-specific resume tailoring
 - **story-builder**: Transform experiences into IMPACT-R narratives
 - **interview-decoder**: Decode questions + generate STAR++ responses
 - **practice-analyzer**: Analyze delivery with targeted feedback
@@ -36,8 +37,7 @@ That's it! Interview OS is ready to use.
 
 ### What Gets Installed
 
-- ✅ 6 intelligent skills (auto-activate based on context)
-- ✅ 4 parallel research sub-agents (3x faster company research)
+- ✅ 7 intelligent skills (auto-activate based on context)
 - ✅ 3 bonus slash commands (/quick-prep, /practice-mode, /red-flag-check)
 - ✅ Auto-created data directory at `~/interview-os/`
 
@@ -85,11 +85,11 @@ Instant analysis and navigation strategy
 
 ---
 
-## 🎓 The 6 Skills
+## 🎓 The 7 Skills
 
 ### 1. company-intel
 
-**What it does**: Deep company research in 3 minutes using 4 parallel sub-agents
+**What it does**: Deep company research in 3 minutes using 4 parallel research streams
 
 **Auto-activates when** you mention:
 - "I have an interview at [Company]"
@@ -98,17 +98,39 @@ Instant analysis and navigation strategy
 
 **Output**: Company Brief JSON with culture keywords, recent challenges, interview style, red/green flags
 
-**Behind the scenes**: Launches 4 AI agents simultaneously:
-- `public-intel-agent`: News, funding, leadership
-- `culture-intel-agent`: Glassdoor, Reddit, Blind
-- `tech-intel-agent`: GitHub, engineering blog, stack
-- `people-intel-agent`: Hiring manager LinkedIn, team
+**Research streams**: Executes 4 parallel research operations:
+- **Public Intelligence**: News, funding, leadership
+- **Culture Intelligence**: Glassdoor, Reddit, Blind
+- **Technical Intelligence**: GitHub, engineering blog, stack
+- **People Intelligence**: Hiring manager LinkedIn, team
 
 **Speed**: 10 min → 3 min (parallel execution)
 
 ---
 
-### 2. story-builder
+### 2. resume-reviewer
+
+**What it does**: ATS optimization and company-specific resume tailoring with actionable before/after examples
+
+**Auto-activates when** you mention:
+- "Review my resume"
+- "Optimize my resume"
+- "Tailor resume for [Company]"
+- Share resume file
+
+**Output**: Comprehensive resume review with:
+- Quick wins (10-minute fixes)
+- ATS compatibility score
+- Achievement quantification analysis
+- Keyword optimization (uses Company Brief if available)
+- Red flag detection and fixes
+- Prioritized action plan
+
+**Key feature**: Before/after examples for every suggestion (not vague advice)
+
+---
+
+### 3. story-builder
 
 **What it does**: Transform raw experiences into IMPACT-R narratives adapted to company culture
 
@@ -127,7 +149,7 @@ Instant analysis and navigation strategy
 
 ---
 
-### 3. interview-decoder
+### 4. interview-decoder
 
 **What it does**: Decode questions, match to stories, generate STAR++ responses
 
@@ -149,7 +171,7 @@ Instant analysis and navigation strategy
 
 ---
 
-### 4. practice-analyzer
+### 5. practice-analyzer
 
 **What it does**: Analyze practice delivery + provide targeted feedback
 
@@ -169,7 +191,7 @@ Instant analysis and navigation strategy
 
 ---
 
-### 5. redflag-navigator
+### 6. redflag-navigator
 
 **What it does**: Detect and navigate concerning interview signals
 
@@ -190,7 +212,7 @@ Instant analysis and navigation strategy
 
 ---
 
-### 6. compensation-architect
+### 7. compensation-architect
 
 **What it does**: Strategic compensation negotiation with market research
 
@@ -362,6 +384,6 @@ Built with inspiration from:
 
 ---
 
-**Interview OS v2.0** - Helping you reach final rounds, one interview at a time.
+**Interview OS v2.1** - Helping you reach final rounds, one interview at a time.
 
 **Remember**: The right opportunity will respect you from day one. 🎯

@@ -1,6 +1,6 @@
 ---
 name: company-intel
-description: Quick company research (3 min) using 4 parallel sub-agents across news, culture, tech, and people. AUTO-INVOKE when user mentions "interview at [Company]", "research [Company]", "tell me about [Company] culture", or provides job posting URL. Generates Company Brief JSON with culture keywords, challenges, interview style, and red/green flags.
+description: Quick company research (3 min) using 4 parallel research streams across news, culture, tech, and people. AUTO-INVOKE when user mentions "interview at [Company]", "research [Company]", "tell me about [Company] culture", or provides job posting URL. Generates Company Brief JSON with culture keywords, challenges, interview style, and red/green flags.
 ---
 
 # Company Intelligence Skill
@@ -20,41 +20,43 @@ AUTO-INVOKE when user:
 - Provides job posting URL
 - Says "company intel for [Company]"
 
-## Research Protocol: 4 Parallel Sub-Agents
+## Research Protocol: 4 Parallel Research Streams
 
 **Think hard about:** What are the most critical signals for interview success at THIS specific company?
 
-### Step 1: Launch Parallel Research
+### Step 1: Execute Parallel Research
 
-Invoke these 4 sub-agents **simultaneously** (not sequentially):
+Conduct these 4 research streams **simultaneously** (not sequentially). Use the Task tool to launch 4 parallel research operations, each following the methodologies in the reference files:
 
-1. **public-intel-agent**
+1. **Public Intelligence** (see [reference/public-intel-research.md](reference/public-intel-research.md))
    - News, funding rounds, leadership changes
    - Recent product launches or pivots
    - Financial health indicators
    - Return: Public Intelligence Report (JSON)
 
-2. **culture-intel-agent**
+2. **Culture Intelligence** (see [reference/culture-intel-research.md](reference/culture-intel-research.md))
    - Glassdoor reviews (focus on interview experiences)
    - Reddit discussions (r/cscareerquestions, company subreddit)
    - Blind posts about culture
    - Return: Culture Intelligence Report (JSON)
 
-3. **tech-intel-agent**
+3. **Technical Intelligence** (see [reference/tech-intel-research.md](reference/tech-intel-research.md))
    - GitHub activity and tech stack
    - Engineering blog posts
    - Conference talks by engineers
    - Return: Technical Intelligence Report (JSON)
 
-4. **people-intel-agent**
+4. **People Intelligence** (see [reference/people-intel-research.md](reference/people-intel-research.md))
    - Hiring manager LinkedIn profile
    - Team composition and backgrounds
    - Recent hires and departures
    - Return: People Intelligence Report (JSON)
 
+**How to execute**: Use 4 parallel Task tool calls with subagent_type="general-purpose", each following one research methodology from the reference files above.
+
 ### Step 2: Aggregate Intelligence
 
-Once all 4 agents return, synthesize into Company Brief.
+Once all 4 research streams complete, synthesize into Company Brief.
 
 **Think harder about:**
 - Patterns across multiple sources (what's consistent?)
@@ -196,14 +198,15 @@ Before completing, verify:
 
 ## Tool Requirements
 
-- WebSearch (for parallel sub-agent research)
+- Task (for launching parallel research streams)
+- WebSearch (for research across all 4 streams)
 - WebFetch (for scraping specific sources)
 - Write (for saving Company Brief JSON)
 - Read (for checking existing briefs)
 
 ## Performance Target
 
-Complete research in **3 minutes** via parallel sub-agents (vs 10 min sequential).
+Complete research in **3 minutes** via parallel research streams (vs 10 min sequential).
 
 ## Advanced Techniques
 
