@@ -1,0 +1,10 @@
+{
+  "install": {
+    "description": "Set up Interview OS data directory",
+    "command": "mkdir -p ~/interview-os/{companies,stories,practice_sessions,interviews} && echo '✅ Interview OS installed! Data directory created at ~/interview-os/' && echo '📚 Try: \"I have an interview at [Company] for [Role] in [X] days\"'"
+  },
+  "uninstall": {
+    "description": "Interview OS cleanup instructions",
+    "command": "echo '⚠️  Interview OS plugin removed. To delete your interview data, manually run: rm -rf ~/interview-os/'"
+  }
+}

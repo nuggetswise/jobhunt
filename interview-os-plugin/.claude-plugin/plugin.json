@@ -1,0 +1,35 @@
+{
+  "name": "interview-os",
+  "description": "AI-powered interview preparation system with 6 specialized skills for company research, story building, question decoding, practice analysis, red flag detection, and compensation negotiation. Helps candidates reach final rounds through intelligent preparation.",
+  "version": "2.0.0",
+  "author": {
+    "name": "Interview OS Team",
+    "url": "https://github.com/nuggetswise/jobhunt"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/nuggetswise/jobhunt",
+
+  "skills": [
+    "./skills/company-intel",
+    "./skills/story-builder",
+    "./skills/interview-decoder",
+    "./skills/practice-analyzer",
+    "./skills/redflag-navigator",
+    "./skills/compensation-architect"
+  ],
+
+  "agents": [
+    "./agents/public-intel-agent.md",
+    "./agents/culture-intel-agent.md",
+    "./agents/tech-intel-agent.md",
+    "./agents/people-intel-agent.md"
+  ],
+
+  "commands": [
+    "./commands/quick-prep.md",
+    "./commands/practice-mode.md",
+    "./commands/red-flag-check.md"
+  ],
+
+  "hooks": "./hooks/hooks.json"
+}
