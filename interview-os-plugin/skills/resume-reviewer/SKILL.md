@@ -24,8 +24,20 @@ Consider suggesting when user:
 - Says "ATS optimization"
 - Asks "how's my resume?"
 
-**IMPORTANT**: If user mentions tailoring for specific company, ask:
-- "Do you have company research I can use for tailoring? Or should I do general ATS optimization?"
+## Goal-First Approach
+
+**Step 1: Ask about user's goal**
+- "Would you like general ATS optimization, or tailored for a specific company?"
+
+**Step 2: Only if company-specific, ask about intel**
+- "Do you have company intel to share (culture keywords, tech stack, values)?"
+- If yes: "Great! Share it - any format works"
+- If no: "Want me to research them, or proceed with general industry best practices?"
+
+**Step 3: Work with what you have**
+- General ATS: Focus on universal best practices
+- Company-tailored with intel: Keyword optimization, tech stack alignment
+- Company-tailored without intel: Industry-standard optimization
 
 ## Review Protocol
 
@@ -62,15 +74,15 @@ Read the resume and assess:
    - Irrelevant information
    - Typos or grammatical errors
 
-### Step 2: Company-Specific Tailoring (If Company Brief Exists)
+### Step 2: Company-Specific Tailoring (If User Provided Intel)
 
-**Check**: `~/interview-os/companies/{company}_*.json`
-
-If Company Brief exists, analyze alignment:
-- Do keywords match company culture_keywords?
+If user shared company intel, analyze alignment:
+- Do keywords match company culture keywords?
 - Do achievements align with company challenges?
 - Does tech stack overlap appear prominently?
 - Are company values reflected in accomplishments?
+
+**Note**: Intel can come from anywhere - don't assume location or format.
 
 ### Step 3: Generate Improvement Report
 
@@ -275,16 +287,13 @@ Before submitting:
 
 **INPUT**:
 - Resume file (.pdf, .docx, .txt, or pasted text)
-- Target role (optional - extracted from resume if not provided)
-- Target company (optional - will use Company Brief if available)
+- User's goal (general ATS vs company-specific)
+- Company intel (if user chooses company-specific and provides it)
 
 **OUTPUT**:
-- Comprehensive review with before/after examples
+- Comprehensive review with before/after examples (displayed in conversation)
 - Prioritized action plan
-- Optionally: Save review to ~/interview-os/resumes/resume_review_YYYY-MM-DD.md
-
-**READS** (optional):
-- ~/interview-os/companies/{company}_*.json (for company-specific tailoring)
+- Optional (if user requests): Save review to ~/interview-os/resumes/
 
 ## Key Principles
 
@@ -430,9 +439,9 @@ This skill succeeds when:
 
 ## Tool Requirements
 
-- Read (for resume files and Company Briefs)
-- Write (for saving review reports)
-- Optionally: WebSearch (for industry-specific keyword research)
+- Read (for resume files)
+- Write (optional - only if user wants review saved)
+- WebSearch (optional - for industry-specific keyword research)
 
 ---
 

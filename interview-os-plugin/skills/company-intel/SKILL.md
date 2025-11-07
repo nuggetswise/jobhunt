@@ -13,17 +13,22 @@ Generate a Company Brief in ~3 minutes that provides everything the candidate ne
 
 ## When to Suggest (NOT Auto-Invoke)
 
-Consider suggesting when user:
-- Says "I have an interview at [Company]"
-- Asks "research [Company]"
-- Mentions "tell me about [Company]"
-- Provides job posting URL
-- Says "company intel for [Company]"
+Consider suggesting when user mentions company research needs.
 
-**IMPORTANT**: Always ASK first before activating:
-- "Would you like me to research [Company]? Or do you already have company intel you'd like to share?"
-- Check for existing Company Brief in ~/interview-os/companies/{company}_*.json
-- User may have intel in other formats (notes, docs, etc.)
+**IMPORTANT - Research is Optional**:
+User might:
+- Already have intel (WhatsApp, email, Glassdoor, gut feeling)
+- Not want/need research at all
+- Prefer to wing it
+
+**Always ASK first**:
+- "Would you like me to research [Company]?"
+- If they hesitate: "Or do you have intel already / prefer to skip research?"
+
+**Don't assume**:
+- ❌ User needs research
+- ❌ Intel should exist in ~/interview-os/
+- ❌ Research is required for good prep
 
 ## Research Protocol: 4 Parallel Research Streams
 
@@ -71,7 +76,7 @@ Once all 4 research streams complete, synthesize into Company Brief.
 
 ### Step 3: Generate Company Brief
 
-Create file: `~/interview-os/companies/{company}_{YYYY-MM-DD}.json`
+If user wants to save, use this schema: `~/interview-os/companies/{company}_{YYYY-MM-DD}.json`
 
 ## Company Brief Schema (v2.0)
 
@@ -147,9 +152,11 @@ Create file: `~/interview-os/companies/{company}_{YYYY-MM-DD}.json`
 
 After generating Company Brief:
 
-1. **Save JSON**: Write to ~/interview-os/companies/{company}_{date}.json
-2. **Display Summary**: Show user a concise 5-bullet summary
-3. **Suggest Next Step**: "Ready to prepare stories adapted to {Company} culture? (This will invoke story-builder skill)"
+1. **Display Summary**: Show user a concise 5-bullet summary
+2. **ASK about saving**: "Want me to save this to ~/interview-os/companies/ for future reference, or keep it in this conversation only?"
+   - If yes: Save JSON file
+   - If no: Intel exists only in conversation context
+3. **Suggest Next** (optional): "Want to prepare stories next?"
 
 ### Summary Template
 
@@ -177,9 +184,9 @@ None - this is the foundational skill.
 - Job posting URL (optional)
 
 **OUTPUT**:
-- File: ~/interview-os/companies/{company}_{YYYY-MM-DD}.json
-- Schema: interview-os-company-brief-v2.0
-- Used by: story-builder, interview-decoder, practice-analyzer, redflag-navigator
+- Default: Research summary in conversation context
+- Optional (if user confirms): Save to ~/interview-os/companies/{company}_{YYYY-MM-DD}.json
+- Can be used by other skills if shared in conversation
 
 ## Error Handling
 
@@ -187,10 +194,6 @@ None - this is the foundational skill.
 - Flag it explicitly: "Limited public information available"
 - Focus on what IS available
 - Recommend direct questions to ask interviewer
-
-**If multiple Company Briefs exist:**
-- Use most recent by date
-- Offer to refresh if > 7 days old
 
 ## Quality Checklist
 

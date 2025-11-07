@@ -70,17 +70,32 @@ Claude will ask what you'd like help with:
 **Week Before Interview:**
 ```
 You: "I have an interview at Stripe next week"
-Claude: "What would you like to work on? Company research, stories, practice questions?"
-You: "Let's start with company research"
-Claude: [Activates company-intel skill after confirmation]
+Claude: "What would you like to work on? Company research, stories, practice?"
+You: "Company research"
+Claude: "Want me to research Stripe, or do you have intel already?"
+You: "I looked at Glassdoor. Here's what I found: [pastes notes]"
+Claude: "Perfect! This is helpful. Want stories next, or something else?"
 ```
 
-**Emergency Prep (1-2 days before):**
+**Emergency Prep (user wants everything):**
 ```
-You: "Interview at Stripe tomorrow - I'm unprepared!"
-Claude: "Let's prioritize. Do you have company intel, or should I research them quickly?"
-You: "Please research them"
-Claude: "Great. While I do that, can you share 2-3 strong achievements? I'll adapt them to Stripe culture."
+You: "Interview at Stripe tomorrow - help me prep EVERYTHING!"
+Claude: "Let's prioritize. What have you done so far?"
+You: "Nothing yet"
+Claude: "Ok! Here's a quick plan:
+        1. Company research (3 min)
+        2. Adapt 3 stories (15 min)
+        3. Practice likely questions (20 min)
+        Sound good?"
+You: "Yes, let's do it"
+Claude: "Starting with research. Want me to research Stripe?"
+```
+
+**User doesn't want intel at all:**
+```
+You: "Help me prepare generic interview stories"
+Claude: "Got it - generic stories. Share 4-6 achievements and I'll
+        structure them using IMPACT-R framework."
 ```
 
 **Red Flag Concerns:**
@@ -216,24 +231,26 @@ Claude: [Analyzes red flags and provides navigation strategy]
 
 ---
 
-## 💾 Data Persistence
+## 💾 Data Persistence (Optional)
 
-All your data is saved locally at `~/interview-os/`:
+**By default**: All your work stays in the conversation only
+
+**If you want to save**: Claude will ask first, then save locally at `~/interview-os/`:
 
 ```
 ~/interview-os/
 ├── companies/
-│   └── stripe_2024-11-05.json       # Company Briefs
+│   └── stripe_2024-11-05.json       # Company Briefs (if saved)
 ├── stories/
-│   ├── story_bank.json              # All your stories
-│   └── story_bank.md                # Human-readable
+│   ├── story_bank.json              # Your stories (if saved)
+│   └── story_bank.md                # Human-readable (if saved)
 ├── practice_sessions/
-│   └── session_001_2024-11-05.json  # Practice analysis
+│   └── session_001_2024-11-05.json  # Practice analysis (if saved)
 └── interviews/
-    └── stripe_interview_log.md      # Interview experiences
+    └── stripe_interview_log.md      # Interview logs (if saved)
 ```
 
-**Privacy**: Everything stays on your machine. Nothing uploaded.
+**Privacy**: If saved, everything stays on your machine. Nothing uploaded.
 
 ---
 

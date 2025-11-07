@@ -247,11 +247,11 @@ Try this version:
 - Add one culture keyword
 - Reference one company challenge
 
-## Saving Practice Sessions
+## Saving Practice Sessions (Optional)
 
-If user wants to save analysis:
+**ASK before saving**: "Want me to save this practice session to ~/interview-os/practice_sessions/ for tracking progress?"
 
-Create file: `~/interview-os/practice_sessions/session_{timestamp}.json`
+If yes, create file: `~/interview-os/practice_sessions/session_{timestamp}.json`
 
 ```json
 {

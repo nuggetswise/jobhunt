@@ -55,18 +55,29 @@ Strategic negotiation support with market research and counter-offer templates.
 
 ```
 You: "I have an interview at Stripe next week"
-Claude: "What would you like to work on? Company research, stories, practice?"
-You: "Let's start with company research"
-Claude: "Great! Do you have intel already, or should I research Stripe?"
+Claude: "What would you like to work on?"
+You: "Company research"
+Claude: "Want me to research Stripe, or share what you know?"
+You: "Here's what my friend told me: [shares WhatsApp convo]"
+Claude: "Helpful! Want stories next?"
 ```
 
-### Emergency Prep (1-2 days before)
+### Emergency Prep (wants full plan)
 
 ```
-You: "Interview at Stripe tomorrow - unprepared!"
-Claude: "Let's prioritize. Company intel first, or jump to stories?"
-You: "I researched them. Need stories fast."
-Claude: "Perfect. Share 2-3 achievements - I'll adapt to Stripe culture."
+You: "Interview at Stripe tomorrow - help me prep!"
+Claude: "What have you done so far?"
+You: "Nothing"
+Claude: "Quick plan: Research (3min) → Stories (15min) → Practice (20min). Sound good?"
+You: "Yes"
+Claude: "Want me to research Stripe, or skip and use generic prep?"
+```
+
+### Generic Prep (no company-specific)
+
+```
+You: "Help me practice common interview questions"
+Claude: "Got it. Want to practice with stories you've prepared, or work through generic responses?"
 ```
 
 ### Red Flag Concerns
@@ -78,18 +89,19 @@ Claude: [Analyzes severity, provides navigation strategy]
 
 ---
 
-## Data Storage
+## Data Storage (Optional)
 
-All your interview data is saved locally at:
+If you want to save your work, Claude will ask first. Data can be saved locally at:
 ```
 ~/interview-os/
-├── companies/       # Company research briefs
-├── stories/         # Your story bank
-├── practice_sessions/  # Practice analysis
-└── interviews/      # Interview logs
+├── companies/       # Company research briefs (if you save them)
+├── stories/         # Your story bank (if you save them)
+├── practice_sessions/  # Practice analysis (if you save them)
+└── interviews/      # Interview logs (if you save them)
 ```
 
-**Privacy**: Everything stays on your machine. Nothing uploaded.
+**By default**: Everything stays in conversation only
+**If you save**: Everything stays on your machine. Nothing uploaded.
 
 ---
 

@@ -18,24 +18,41 @@ Consider suggesting when user:
 - Mentions "behavioral interview prep"
 - Asks "how do I answer tell me about a time..."
 
-**IMPORTANT**: Always ASK first:
-- "Would you like stories tailored to a specific company, or generic stories?"
-- If company-specific: "Do you have company research, or would you like me to research them?"
+## Goal-First Approach
 
-## Prerequisites Check (Flexible)
+**Step 1: Ask about user's goal**
+- "Would you like generic interview stories, or tailored to a specific company?"
 
-**Before running:**
+**Step 2: Only if company-specific, ask about intel**
+- "Do you have company intel to share (culture keywords, values, challenges)?"
+- If yes: "Great! Share it - any format works (notes, bullets, whatever)"
+- If no: "Want me to research them, or work from your instinct about the company?"
+- If research: Activate company-intel skill
+- If instinct: Proceed with user's knowledge
 
-1. Ask if user wants company-tailored or generic stories
-2. If company-tailored, check for intel:
-   - Check ~/interview-os/companies/{company}_*.json
-   - If not found, ask: "Do you have company intel documented elsewhere you can share?"
-   - If no intel exists, offer to research or proceed with generic stories
+**Step 3: Work with what you have**
+- Generic stories: No intel needed
+- Company-tailored with intel: Use provided/researched intel
+- Company-tailored without intel: Use user's instincts and general industry knowledge
 
-**Helpful intel for story adaptation (if available):**
-- Culture keywords - for natural language adaptation
-- Core values - for alignment
-- Recent challenges - for relevance injection
+## Data: Accept Any Format, Ask Before Saving
+
+**Intel can come from anywhere:**
+- WhatsApp conversation with friend
+- Email from recruiter
+- Glassdoor screenshots
+- User's gut feeling
+- Notion notes
+
+**Don't assume:**
+- ❌ Intel should be in ~/interview-os/
+- ❌ Intel needs to be saved
+- ❌ Structured format required
+
+**Instead:**
+- ✅ Accept intel in any format user provides
+- ✅ ASK if they want stories saved: "Want me to save these to ~/interview-os/stories/, or just work in-memory?"
+- ✅ Work entirely in-memory if preferred
 
 ## Story Building Protocol
 
@@ -121,7 +138,7 @@ For each story, create 3 length variations:
 
 ## Story Bank Schema (v2.0)
 
-Create file: `~/interview-os/stories/story_bank.json`
+If user wants to save, use this schema: `~/interview-os/stories/story_bank.json`
 
 ```json
 {
@@ -211,12 +228,13 @@ The same base experience can be told differently for different companies:
 
 ## Output Format
 
-After generating Story Bank:
+After generating stories:
 
-1. **Save JSON**: Write to ~/interview-os/stories/story_bank.json
-2. **Save Markdown**: Human-readable version to ~/interview-os/stories/story_bank.md
-3. **Display Summary**: Show story titles with competencies
-4. **Suggest Next**: "Ready to practice interview questions? (This will invoke interview-decoder skill)"
+1. **Display Summary**: Show story titles with competencies
+2. **ASK about saving**: "Would you like me to save these stories to ~/interview-os/stories/ for future reference, or keep them in this conversation only?"
+   - If yes: Save JSON + Markdown files
+   - If no: Stories exist only in conversation context
+3. **Suggest Next** (optional): "Want to practice interview questions next?"
 
 ### Summary Template
 
@@ -237,15 +255,15 @@ After generating Story Bank:
 
 ## Data Contract
 
-**INPUT**:
-- Company Brief (from company-intel)
+**INPUT** (all optional and flexible):
+- Company intel in ANY format (WhatsApp, email, notes, gut feeling, or researched)
 - User's raw experiences (provided in conversation)
-- Optional: Existing story_bank.json to update
+- User's goal (generic vs company-specific)
 
-**OUTPUT**:
-- File: ~/interview-os/stories/story_bank.json
-- Schema: interview-os-story-bank-v2.0
-- Used by: interview-decoder, practice-analyzer
+**OUTPUT** (based on user preference):
+- Default: Stories in conversation context only
+- Optional (if user confirms): Save to ~/interview-os/stories/story_bank.json
+- Can be used by other skills if shared or saved
 
 ## Quality Checklist
 
