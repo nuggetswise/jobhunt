@@ -1,0 +1,13 @@
+{
+  "name": "Interview OS",
+  "description": "Professional interview preparation plugins and skills",
+  "url": "https://github.com/nuggetswise/jobhunt",
+  "plugins": [
+    {
+      "name": "interview-os",
+      "description": "Complete AI-powered interview preparation system",
+      "version": "2.0.0",
+      "path": "."
+    }
+  ]
+}
